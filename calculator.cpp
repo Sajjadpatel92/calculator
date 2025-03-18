@@ -1,122 +1,101 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
 
+int add(int x,int y){
 
-float add(float, float);
-float subtract(float, float);
-float multiply(float, float);
-float divide(float, float);
-int modulus(int, int);
+    cout<<"sum of "<<x<<" and "<<y<<" is "<<x+y<<endl;
+    return x+y;
+}
+int sub(int x,int y){
 
-int main() {
-    int choice;
-    float num1, num2, result;
-    int num1_int, num2_int, mod_result;
-   
+    cout<<"sub of "<<x<<" and "<<y<<" is "<<x-y<<endl;
+    return x-y;
+}
+int mul(int x,int y){
 
-  
-    do {
-     
-        cout << "Menu:"<<endl;
-        cout << "Press 1 for +"<<endl;
-        cout << "Press 2 for -"<<endl;
-        cout << "Press 3 for *"<<endl;
-        cout << "Press 4 for /"<<endl;
-        cout << "Press 5 for %"<<endl;
-        cout << "Press 0 for Exit"<<endl;
-        cout << "Enter your choice: ";
-        cin >> choice;
+    cout<<"mul of "<<x<<" and "<<y<<" is "<<x*y<<endl;
+    return x*y;
+}
+int divid(int x,int y){
 
- 
-        switch (choice) {
-            case 1:
-                cout << "Enter the first numbers: ";
-                cin >> num1;
-                cout << "Enter the second number: ";
-                cin >> num2;
-                result = add(num1, num2);
-                cout << "Addition of: "<<(num1) <<" and "<<(num2)<< " is "<< result << endl;
-                break;
+    cout<<"divid of "<<x<<" and "<<y<<" is "<<x/y<<endl;
+    return x/y;
+}
+    int par(int x,int y){
 
-            case 2:
-            cout << "Enter the first numbers: ";
-            cin >> num1;
-            cout << "Enter the second number: ";
-            cin >> num2;
-                result = subtract(num1, num2);
-                cout << "subtraction of: "<<(num1) <<" and "<<(num2)<< " is "<< result << endl;
-                break;
-
-            case 3:
-            cout << "Enter the first numbers: ";
-            cin >> num1;
-            cout << "Enter the second number: ";
-            cin >> num2;
-                result = multiply(num1, num2);
-                cout << "Multiplication of: "<<(num1) <<" and "<<(num2)<< " is "<< result << endl;
-                break;
-
-            case 4:
-            cout << "Enter the first numbers: ";
-            cin >> num1;
-            cout << "Enter the second number: ";
-            cin >> num2;
-            
-                if (num2 != 0) {
-                    result = divide(num1, num2);
-                    cout << "Divition of: "<<(num1) <<" and "<<(num2)<< " is "<< result << endl;
-                } else {
-                    cout << "Error! Division by zero is not allowed"<<endl;
-                }
-                break;
-
-
-                case 5:
-                cout << "Enter the first numbers: ";
-                cin >> num1;
-                cout << "Enter the second number: ";
-                cin >> num2;
-         
-                
-                
-                // if (num2_int != 0) {
-                //     mod_result = modulus(num1_int, num2_int);
-                //     cout << "Result: " << mod_result << endl;
-                // } else {
-                //     cout << "Error!."<<endl;
-                // }
-                // break;
-
-
-            case 0:
-            cout << "Exiting the program."<<endl;
-            break;
-
-        default:
-            cout << "Invalid choice! Please try again."<<endl;
+        cout<<"parcentage of "<<x<<" and "<<y<<" is "<<x%y<<endl;
+        return x%y;
     }
 
-} while (choice != 0);  
 
-return 0;
-}
-//  UDF arithmetic operations
 
-float add(float a, float b) {
-    return a + b;
-}
 
-float subtract(float a, float b) {
-    return a - b;
-}
+int main ()
+{ int Choice;
+    do
+    {
+        cout << endl;
+        cout << "Press 1 for +" << endl;
+        cout << "Press 2 for -" << endl;
+        cout << "Press 3 for *" << endl;
+        cout << "Press 4 for /" << endl;
+        cout << "Press 5 for %" << endl;
+        cout << "Press 0 for the Exit" << endl;
+        cin >> Choice;
 
-float multiply(float a, float b) {
-    return a * b;
-}
+        switch (Choice)
+        {
+        case 1:
+            int a, b;
+            cout << "Enter the first number : ";
+            cin >> a;
+            cout << "Enter the second number : ";
+            cin >> b;
+            cout << "Addition of " << a << " and " << b << " is " << add(a, b) << endl;
+            break;
 
-float divide(float a, float b) {
-    return a / b;
-}
-int modulus(int a, int b) {
-    return a % b;
+        case 2:
+            int c, d;
+            cout << "Enter the first number : ";
+            cin >> c;
+            cout << "Enter the second number : ";
+            cin >> d;
+            cout << "Addition of " << c << " and " << d << " is " << sub(c, d) << endl;
+            break;
+
+        case 3:
+            int e, f;
+            cout << "Enter the first number : ";
+            cin >> e;
+            cout << "Enter the second number : ";
+            cin >> f;
+            cout << "Addition of " << e << " and " << f << " is " << mul(e, f) << endl;
+            break;
+
+        case 4:
+            float g, h;
+            cout << "Enter the first number : ";
+            cin >> g;
+            cout << "Enter the second number : ";
+            cin >> h;
+            cout << "Addition of " << g << " and " << h << " is " << divid(g, h) << endl;
+            break;
+
+        case 5:
+            int i, j;
+            cout << "Enter the first number : ";
+            cin >> i;
+            cout << "Enter the second number : ";
+            cin >> j;
+            cout << "Addition of " << i << " and " << j << " is " << par(i, j) << endl;
+            break;
+
+        case 0:
+            cout << "Exiting the program... ";
+        default:
+            break;
+        }
+    } while (Choice != 0);
+
+    return 0;
 }
