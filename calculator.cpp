@@ -3,27 +3,27 @@ using namespace std;
 
 int add(int x,int y){
 
-    cout<<"sum of "<<x<<" and "<<y<<" is "<<x+y<<endl;
+    // cout<<"sum of "<<x<<" and "<<y<<" is "<<x+y<<endl;
     return x+y;
 }
 int sub(int x,int y){
 
-    cout<<"sub of "<<x<<" and "<<y<<" is "<<x-y<<endl;
+    // cout<<"sub of "<<x<<" and "<<y<<" is "<<x-y<<endl;
     return x-y;
 }
 int mul(int x,int y){
 
-    cout<<"mul of "<<x<<" and "<<y<<" is "<<x*y<<endl;
+    // cout<<"mul of "<<x<<" and "<<y<<" is "<<x*y<<endl;
     return x*y;
 }
 int divid(int x,int y){
 
-    cout<<"divid of "<<x<<" and "<<y<<" is "<<x/y<<endl;
+    // cout<<"divid of "<<x<<" and "<<y<<" is "<<x/y<<endl;
     return x/y;
 }
     int par(int x,int y){
 
-        cout<<"parcentage of "<<x<<" and "<<y<<" is "<<x%y<<endl;
+        // cout<<"parcentage of "<<x<<" and "<<y<<" is "<<x%y<<endl;
         return x%y;
     }
 
@@ -51,7 +51,7 @@ int main ()
             cin >> a;
             cout << "Enter the second number : ";
             cin >> b;
-            cout << "Addition of " << a << " and " << b << " is " << add(a, b) << endl;
+            cout << "sum of " << a << " and " << b << " is " << add(a, b) << endl;
             break;
 
         case 2:
@@ -60,7 +60,7 @@ int main ()
             cin >> c;
             cout << "Enter the second number : ";
             cin >> d;
-            cout << "Addition of " << c << " and " << d << " is " << sub(c, d) << endl;
+            cout << "Subtractin of " << c << " and " << d << " is " << sub(c, d) << endl;
             break;
 
         case 3:
@@ -69,7 +69,7 @@ int main ()
             cin >> e;
             cout << "Enter the second number : ";
             cin >> f;
-            cout << "Addition of " << e << " and " << f << " is " << mul(e, f) << endl;
+            cout << "Multiplication of " << e << " and " << f << " is " << mul(e, f) << endl;
             break;
 
         case 4:
@@ -78,7 +78,7 @@ int main ()
             cin >> g;
             cout << "Enter the second number : ";
             cin >> h;
-            cout << "Addition of " << g << " and " << h << " is " << divid(g, h) << endl;
+            cout << "Division of " << g << " and " << h << " is " << divid(g, h) << endl;
             break;
 
         case 5:
@@ -87,7 +87,7 @@ int main ()
             cin >> i;
             cout << "Enter the second number : ";
             cin >> j;
-            cout << "Addition of " << i << " and " << j << " is " << par(i, j) << endl;
+            cout << "Par of " << i << " and " << j << " is " << par(i, j) << endl;
             break;
 
         case 0:
